@@ -45,4 +45,22 @@ class CalculatorTest {
 
 
     }
+
+    @Test
+    void testdivide(){
+        //arrange
+        int a=10;
+        int b=5;
+
+        //act
+        int result = calc.divide(a,b);
+
+
+        //assert
+        assertEquals(2, result);
+
+
+    }
+
+
 }
