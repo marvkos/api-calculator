@@ -1,15 +1,24 @@
 package at.technikum.calculator;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
 
+    private Calculator calc = new Calculator();
+
+    @BeforeEach
+    void initialize(){
+         calc = new Calculator();
+    }
+
     @Test
     void sum() {
         //arrange
-        Calculator calc = new Calculator();
+
         int a=5;
         int b=10;
 
@@ -19,5 +28,21 @@ class CalculatorTest {
 
         //assert
         assertEquals(15, result);
+    }
+
+    @Test
+    void testmultiply(){
+        //arrange
+        int a=5;
+        int b=10;
+
+        //act
+        int result = calc.multiply(a,b);
+
+
+        //assert
+        assertEquals(50, result);
+
+
     }
 }
